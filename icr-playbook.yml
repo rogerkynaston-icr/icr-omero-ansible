@@ -1,0 +1,17 @@
+---
+
+# This is the basis of a playbook to deploy Omero on a single standalone server
+# This will install and configure:
+#	Postgresql
+#	nginx
+# 	Omero Server
+#	Omero Web
+
+
+- hosts: all
+  roles:
+    - nginx-install
+    - postgresql-install
+    - omero-server-install
+    - omero-web-install
+
